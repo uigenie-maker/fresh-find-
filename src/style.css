@@ -1,0 +1,333 @@
+
+
+
+
+
+
+
+:root{
+  --ff-green:#23845a;
+  --ff-green-dark:#14613f;
+  --ff-green-soft:#eaf7f0;
+  --ff-cream:#f7fbf8;
+  --ff-ink:#173127;
+  --ff-muted:#68776f;
+  --ff-border:#e4eee8;
+  --ff-shadow:0 18px 50px rgba(22,70,47,.10);
+}
+*{box-sizing:border-box}
+ /* div.container{
+color: #14613f;
+}  */
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Poppins","Segoe UI",sans-serif;background:var(--ff-cream);color:var(--ff-ink);line-height:1.7}
+.navbar{min-height:78px;background:rgba(255,255,255,.96)!important;backdrop-filter:blur(12px);border-bottom:1px solid var(--ff-border)!important}
+.navbar-brand{font-size:1.35rem;letter-spacing:-.3px;color:var(--ff-green)!important}
+.brand-mark{width:38px;height:38px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;background:var(--ff-green-soft);font-size:1.2rem}
+.nav-link{position:relative;font-weight:500;color:#405047!important;padding:.65rem .85rem!important;border-radius:10px}
+.nav-link:hover{color:var(--ff-green)!important;background:var(--ff-green-soft)}
+.nav-link.active{color:var(--ff-green)!important;font-weight:700;background:var(--ff-green-soft)}
+.navbar-toggler{border:1px solid var(--ff-border);padding:.5rem .65rem}
+.btn{border-radius:11px;font-weight:600;transition:all .2s ease}
+.btn-success{background:var(--ff-green);border-color:var(--ff-green)}
+.btn-success:hover{background:var(--ff-green-dark);border-color:var(--ff-green-dark);transform:translateY(-1px)}
+.btn-outline-success{color:var(--ff-green);border-color:#a9d6bd}
+.btn-outline-success:hover{background:var(--ff-green);border-color:var(--ff-green)}
+.hero-home{position:relative;min-height:600px;display:flex;align-items:center;color:#fff;overflow:hidden;background:linear-gradient(90deg,rgba(9,47,31,.94) 0%,rgba(16,82,53,.82) 52%,rgba(35,132,90,.45) 100%),url("/images/hero.jpg") center/cover}
+.hero-home:after{content:"";position:absolute;right:-90px;bottom:-150px;width:440px;height:440px;border:1px solid rgba(255,255,255,.18);border-radius:50%;box-shadow:0 0 0 70px rgba(255,255,255,.04),0 0 0 140px rgba(255,255,255,.025)}
+.hero-home .container{position:relative;z-index:2}
+.hero-home h1{max-width:760px;font-size:clamp(2.5rem,5.3vw,4.7rem);line-height:1.08;letter-spacing:-1.8px}
+.hero-home p{max-width:650px;color:rgba(255,255,255,.88);font-size:1.08rem}
+.hero-kicker{display:inline-flex;align-items:center;gap:.45rem;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);border-radius:50px;padding:.55rem .9rem;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.hero-stat{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.17);border-radius:16px;padding:1rem 1.1rem;backdrop-filter:blur(8px)}
+.hero-stat strong{font-size:1.25rem;display:block}.hero-stat span{font-size:.78rem;color:rgba(255,255,255,.72)}
+.section-title{font-weight:700;color:var(--ff-ink);letter-spacing:-.5px}.section-subtitle{color:var(--ff-muted)}
+.section-kicker{font-size:.78rem;font-weight:700;color:var(--ff-green);letter-spacing:.12em;text-transform:uppercase}
+.feature-card,.product-card,.contact-card,.filter-card,.market-card,.info-card{border:1px solid var(--ff-border);border-radius:20px;box-shadow:0 8px 30px rgba(25,65,45,.06);background:#fff}
+.feature-card,.product-card{height:100%;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease}
+.feature-card:hover,.product-card:hover{transform:translateY(-6px);box-shadow:var(--ff-shadow)}
+.feature-card img,.product-card img{width:100%;height:220px;object-fit:cover}
+.feature-card .card-body,.product-card .card-body{background:#fff}
+.card-tag{position:absolute;top:14px;left:14px;border-radius:50px;background:rgba(255,255,255,.92);color:var(--ff-green);font-size:.72rem;font-weight:700;padding:.4rem .65rem;box-shadow:0 5px 18px rgba(0,0,0,.08)}
+.badge-soft{background:var(--ff-green-soft);color:var(--ff-green);border:1px solid #d5ecdf}
+.page-wrap{padding:52px 0 25px}
+.page-hero{position:relative;min-height:300px;border-radius:28px;overflow:hidden;background:linear-gradient(100deg,rgba(13,62,41,.95),rgba(35,132,90,.70)),url("/images/leaves.jpg") center/cover;color:#fff;display:flex;align-items:center;padding:3.2rem}
+.page-hero h1{max-width:720px;letter-spacing:-1px}.page-hero p{max-width:650px;color:rgba(255,255,255,.84)}
+.search-panel{background:#fff;border:1px solid var(--ff-border);border-radius:20px;padding:24px;box-shadow:0 10px 35px rgba(25,65,45,.06)}
+.search-panel .form-control,.search-panel .input-group-text{border-color:var(--ff-border);background:#fbfdfc}
+.search-panel .form-control:focus{box-shadow:0 0 0 .2rem rgba(35,132,90,.12);border-color:#9dccb4}
+.filter-card{position:sticky;top:96px}.filter-card hr{border-color:var(--ff-border)}
+.form-check-input:checked{background-color:var(--ff-green);border-color:var(--ff-green)}
+.market-card{transition:transform .2s ease,box-shadow .2s ease}.market-card:hover{transform:translateY(-3px);box-shadow:var(--ff-shadow)}
+.market-img{width:100%;height:115px;object-fit:cover;border-radius:15px}
+.market-meta{color:var(--ff-muted);font-size:.86rem}
+.product-tabs{padding:6px;background:#fff;border:1px solid var(--ff-border);border-radius:50px;display:inline-flex;box-shadow:0 5px 20px rgba(25,65,45,.05)}
+.product-tabs .btn{border:0;border-radius:50px;padding:.55rem 1rem}.product-tabs .btn.active{background:var(--ff-green);color:#fff;box-shadow:0 5px 14px rgba(35,132,90,.2)}
+.product-card .product-image{position:relative}.product-card img{height:235px}.product-price{font-weight:700;color:var(--ff-green)}
+.icon-box{width:52px;height:52px;border-radius:15px;background:var(--ff-green-soft);display:flex;align-items:center;justify-content:center;color:var(--ff-green);font-size:1.25rem;flex-shrink:0}
+.icon-box-lg{width:62px;height:62px;border-radius:18px;font-size:1.5rem}
+.info-card{padding:1.5rem;height:100%}
+.list-group-item{border-color:var(--ff-border)!important;background:transparent}
+.map-frame{border:0;border-radius:18px;width:100%;height:320px}
+.form-control{border-radius:11px;border-color:var(--ff-border);padding:.7rem .85rem}.form-control:focus{border-color:#91caae;box-shadow:0 0 0 .2rem rgba(35,132,90,.12)}
+.footer{background:#102d21;color:#dbe9e1;margin-top:70px}.footer .brand-mark{background:rgba(255,255,255,.08)}
+.footer p,.footer .text-muted{color:#a8bdb2!important}.footer h5,.footer h6{color:#fff}.footer a{display:block;color:#a8bdb2;text-decoration:none;margin:.45rem 0;transition:.2s}.footer a:hover{color:#fff;transform:translateX(2px)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1)}
+.login-modal{border:1px solid var(--ff-border);border-radius:22px;overflow:hidden}.login-brand{background:linear-gradient(145deg,var(--ff-green-dark),var(--ff-green));color:#fff}
+.chat-button{position:fixed;right:24px;bottom:24px;width:58px;height:58px;border:0;border-radius:50%;background:var(--ff-green);color:#fff;box-shadow:0 10px 28px rgba(20,97,63,.30);z-index:1050}.chat-button:hover{background:var(--ff-green-dark);transform:translateY(-2px)}
+.empty-state{display:none}.stat-strip{margin-top:-45px;position:relative;z-index:5}.stat-card{background:#fff;border:1px solid var(--ff-border);border-radius:18px;padding:1.35rem;box-shadow:var(--ff-shadow)}
+@media(max-width:991.98px){.navbar-nav{padding-top:1rem}.nav-item.ms-lg-2{margin-top:.5rem}.page-hero{padding:2.4rem;min-height:260px}.filter-card{position:static}.hero-home{min-height:570px}}
+@media(max-width:767.98px){.hero-home{min-height:650px}.hero-home h1{font-size:2.55rem}.page-wrap{padding-top:28px}.page-hero{padding:1.7rem;border-radius:22px}.page-hero h1{font-size:2.25rem}.market-img{height:190px}.product-tabs{border-radius:18px;width:100%;justify-content:center}.stat-strip{margin-top:0}.hero-stat{padding:.85rem}.footer{margin-top:45px}}
+
+
+/* Simple Chat Box */
+.chat-button{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  width:58px;
+  height:58px;
+  border:0;
+  border-radius:50%;
+  background:var(--ff-green);
+  color:#fff;
+  font-size:24px;
+  box-shadow:0 8px 25px rgba(0,0,0,.18);
+  z-index:1050;
+  cursor:pointer;
+}
+.chat-button:hover{background:var(--ff-green-dark);transform:translateY(-2px)}
+.chat-box{
+  position:fixed;
+  right:24px;
+  bottom:92px;
+  width:330px;
+  max-width:calc(100vw - 32px);
+  background:#fff;
+  border:1px solid var(--ff-border);
+  border-radius:18px;
+  box-shadow:0 18px 50px rgba(0,0,0,.18);
+  overflow:hidden;
+  z-index:1060;
+  display:none;
+}
+.chat-box.show{display:block}
+.chat-header{
+  background:var(--ff-green);
+  color:#fff;
+  padding:14px 16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-weight:600;
+}
+.chat-header button{
+  border:0;background:transparent;color:#fff;font-size:25px;line-height:1;cursor:pointer;
+}
+.chat-messages{
+  height:230px;
+  overflow-y:auto;
+  padding:14px;
+  background:#f8fbf9;
+}
+.chat-message{
+  max-width:85%;
+  padding:9px 12px;
+  border-radius:12px;
+  margin-bottom:9px;
+  font-size:14px;
+  line-height:1.4;
+}
+.chat-message.bot{background:#eaf7f0;color:var(--ff-ink);border-bottom-left-radius:4px}
+.chat-message.user{background:var(--ff-green);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+.chat-quick{
+  display:flex;
+  gap:6px;
+  padding:8px 10px;
+  overflow-x:auto;
+  border-top:1px solid var(--ff-border);
+}
+.chat-quick-btn{
+  white-space:nowrap;
+  border:1px solid #b9dcc8;
+  background:#fff;
+  color:var(--ff-green-dark);
+  border-radius:20px;
+  padding:5px 9px;
+  font-size:12px;
+  cursor:pointer;
+}
+.chat-quick-btn:hover{background:var(--ff-green-soft)}
+.chat-input{
+  display:flex;
+  padding:10px;
+  border-top:1px solid var(--ff-border);
+  gap:7px;
+  background:#fff;
+}
+.chat-input input{
+  min-width:0;
+  flex:1;
+  border:1px solid var(--ff-border);
+  border-radius:10px;
+  padding:9px 10px;
+  outline:none;
+}
+.chat-input input:focus{border-color:#9bcfb2}
+.chat-input button{
+  width:42px;
+  border:0;
+  border-radius:10px;
+  background:var(--ff-green);
+  color:#fff;
+  cursor:pointer;
+}
+@media(max-width:576px){
+  .chat-box{right:16px;bottom:84px;width:calc(100vw - 32px)}
+  .chat-button{right:16px;bottom:16px}
+}
+
+
+/* FreshFind visual polish */
+.navbar{
+  min-height:80px!important;
+  box-shadow:0 8px 28px rgba(24,72,49,.08)!important;
+  transition:box-shadow .25s ease, background .25s ease;
+}
+.navbar-brand{font-size:1.42rem!important;letter-spacing:-.4px}
+.brand-mark{
+  width:42px!important;height:42px!important;border-radius:13px!important;
+  box-shadow:inset 0 0 0 1px rgba(35,132,90,.08);
+}
+.nav-link{
+  margin:.15rem .08rem;
+  border:1px solid transparent;
+  transition:all .22s ease!important;
+}
+.nav-link:hover{
+  transform:translateY(-2px);
+  border-color:#d7eee1;
+  box-shadow:0 5px 14px rgba(35,132,90,.08);
+}
+.nav-link.active{
+  box-shadow:0 5px 14px rgba(35,132,90,.08);
+}
+.navbar .btn-success{
+  box-shadow:0 8px 18px rgba(35,132,90,.16);
+}
+.product-card{
+  position:relative;
+  border-radius:22px!important;
+  background:rgba(255,255,255,.98);
+}
+.product-card .product-image{
+  overflow:hidden;
+  background:#eef8f1;
+}
+.product-card img{
+  height:235px!important;
+  object-fit:cover;
+  transition:transform .45s ease;
+}
+.product-card:hover img{transform:scale(1.045)}
+.product-card .card-body{min-height:265px;display:flex;flex-direction:column}
+.product-card .card-body .mt-auto{margin-top:auto!important}
+.product-action-row{display:flex;gap:.55rem;margin-top:auto}
+.product-action-row .btn{flex:1}
+.bookmark-btn{
+  width:44px!important;flex:0 0 44px!important;
+  border-radius:11px!important;
+}
+.bookmark-btn.saved{background:#eaf7f0;color:#23845a;border-color:#bfe1cd}
+.product-modal .modal-content{
+  border:0;border-radius:24px;overflow:hidden;
+  box-shadow:0 24px 70px rgba(15,57,38,.22);
+}
+.product-modal .modal-header{
+  background:linear-gradient(135deg,#f1faf5,#fff);
+  border-bottom:1px solid #e4eee8;
+}
+.product-modal .modal-icon{
+  width:54px;height:54px;border-radius:16px;background:#eaf7f0;
+  display:flex;align-items:center;justify-content:center;color:#23845a;font-size:1.35rem;
+}
+.product-modal .modal-product-img{
+  width:100%;height:230px;object-fit:cover;border-radius:18px;background:#eef8f1;
+}
+.product-modal .modal-label{
+  color:#23845a;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;font-weight:700;
+}
+.bookmark-hero{
+  background:linear-gradient(105deg,rgba(13,62,41,.96),rgba(35,132,90,.78)),url("/images/leaves.jpg") center/cover;
+  border-radius:28px;color:#fff;padding:3rem;
+}
+.bookmark-empty{
+  border:1px dashed #cfe5d7;background:#fbfefc;border-radius:20px;padding:3rem 1.5rem;text-align:center;
+}
+.saved-product-card{height:100%;border:1px solid var(--ff-border);border-radius:20px;background:#fff;overflow:hidden;box-shadow:0 8px 30px rgba(25,65,45,.06)}
+.saved-product-card img{height:190px;width:100%;object-fit:cover;background:#eef8f1}
+.saved-product-card .card-body{padding:1.2rem}
+@media(max-width:991.98px){
+  .navbar-nav{padding-top:1rem}
+  .nav-link{margin:.1rem 0}
+}
+
+
+
+
+/* =========================================
+   BOOKMARK PAGE UI
+   Scoped so it does not affect other React pages.
+   ========================================= */
+.bookmark-page{padding-top:8px}
+.bookmark-page .nav-pills .nav-link{
+  color:var(--ff-green);
+  background:#e7f3ea;
+  border-radius:20px;
+  font-weight:600;
+  padding:.55rem 1rem!important;
+}
+.bookmark-page .nav-pills .nav-link.active{
+  background:var(--ff-green);
+  color:#fff!important;
+}
+.bookmark-page .market-card,
+.bookmark-page .produce-card .card{
+  border:1px solid var(--ff-border);
+  border-radius:20px;
+  overflow:hidden;
+  background:#fff;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.bookmark-page .market-card:hover,
+.bookmark-page .produce-card .card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--ff-shadow);
+}
+.bookmark-page .market-card .card-img-top{
+  width:100%;height:185px;object-fit:cover;
+}
+.bookmark-page .tag-badge{
+  background:#e7f3ea;color:var(--ff-green);
+  font-weight:600;margin-right:4px;margin-bottom:4px;
+}
+.bookmark-page .remove-bookmark,
+.bookmark-page .remove-produce{cursor:pointer;transition:.2s ease}
+.bookmark-page .remove-bookmark:hover{color:#dc3545!important;transform:scale(1.12)}
+.bookmark-page .remove-produce:hover{color:#bb2d3b!important;transform:scale(1.12)}
+.bookmark-page .produce-img{width:60px;height:60px;object-fit:cover;flex-shrink:0}
+.bookmark-page .bookmark-empty{border:1px dashed #cfe5d7;background:#fbfefc;border-radius:20px;padding:3rem 1.5rem;text-align:center}
+
+/* Market and product card image sizing after removing global bookmark CSS */
+.market-card .card-img-top{height:220px;object-fit:cover}
+.product-card .card-img-top{height:235px;object-fit:cover}
+
+@media(max-width:767.98px){
+  .bookmark-page .market-card .card-img-top{height:175px}
+  .bookmark-page .nav-pills{width:100%;justify-content:center}
+  .bookmark-page .nav-pills .nav-link{font-size:.85rem;padding:.45rem .75rem!important}
+}
+@media(max-width:400px){
+  .bookmark-page .nav-pills .nav-link{font-size:.76rem;padding:.4rem .55rem!important}
+  .bookmark-page .btn-outline-danger{width:100%}
+}

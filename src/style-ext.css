@@ -1,0 +1,619 @@
+/* =========================================
+   FRESHFIND RESPONSIVE & POLISHED STYLES
+   Fixes navbar wrapping, category alignment & vertical jumps
+   ========================================= */
+
+/* -----------------------------------------
+   1. REAL-TIME RADAR SUB-HEADER
+   ----------------------------------------- */
+.live-radar-bar {
+  background: #143828;
+  color: #c9e4d5;
+  font-size: 0.84rem;
+  padding: 0.45rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+}
+.live-radar-bar .pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #2ecc71;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+  animation: pulse-green 1.8s infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse-green {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
+  70% { transform: scale(1.15); box-shadow: 0 0 0 8px rgba(46, 204, 113, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+}
+
+@media (max-width: 767.98px) {
+  .live-radar-bar {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.76rem;
+  }
+  .live-radar-bar .container {
+    justify-content: center !important;
+    gap: 0.35rem !important;
+  }
+}
+
+/* -----------------------------------------
+   2. NAVBAR RESPONSIVENESS & STABILITY
+   ----------------------------------------- */
+.navbar {
+  min-height: 74px !important;
+  height: auto;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--ff-border) !important;
+  box-shadow: 0 4px 20px rgba(18, 59, 39, 0.06) !important;
+  transition: none !important; /* Prevent vertical height jump */
+}
+
+.navbar-brand {
+  font-size: 1.35rem !important;
+  letter-spacing: -0.3px;
+  color: var(--ff-green) !important;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0;
+  margin-right: 1.25rem;
+}
+
+.brand-mark {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 12px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ff-green-soft) !important;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Desktop Navbar Items (>= 1200px) */
+@media (min-width: 1200px) {
+  .navbar {
+    height: 74px !important;
+  }
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-link {
+    font-weight: 500;
+    color: #3b4e44 !important;
+    padding: 0.45rem 0.75rem !important;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease, color 0.2s ease !important;
+    transform: none !important; /* CRITICAL: Remove translateY jitter */
+    display: inline-flex;
+    align-items: center;
+  }
+  .nav-link:hover {
+    color: var(--ff-green) !important;
+    background: var(--ff-green-soft) !important;
+    transform: none !important; /* Eliminates vertical jumping */
+    box-shadow: none !important;
+  }
+  .nav-link.active {
+    color: var(--ff-green) !important;
+    font-weight: 700;
+    background: var(--ff-green-soft) !important;
+    box-shadow: none !important;
+  }
+  .navbar-auth-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0.75rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .navbar-auth-group .btn {
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: 0.86rem;
+    transform: none !important;
+  }
+}
+
+/* Mobile & Tablet Navbar (< 1200px) */
+@media (max-width: 1199.98px) {
+  .navbar {
+    min-height: 68px !important;
+    padding: 0.5rem 0;
+  }
+  .navbar-toggler {
+    border: 1.5px solid var(--ff-border);
+    padding: 0.45rem 0.65rem;
+    border-radius: 10px;
+  }
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(35, 132, 90, 0.15);
+  }
+  .navbar-collapse {
+    background: #ffffff;
+    border: 1px solid var(--ff-border);
+    border-radius: 20px;
+    padding: 1.25rem;
+    margin-top: 0.75rem;
+    box-shadow: 0 16px 40px rgba(18, 59, 39, 0.12);
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .nav-link {
+    padding: 0.7rem 1rem !important;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+  }
+  .nav-link:hover, .nav-link.active {
+    background: var(--ff-green-soft) !important;
+    color: var(--ff-green) !important;
+    transform: none !important;
+  }
+  .navbar-auth-group {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--ff-border);
+    width: 100%;
+  }
+  .navbar-auth-group .btn {
+    flex: 1;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.92rem;
+  }
+}
+
+/* -----------------------------------------
+   3. CATEGORY FILTERS RESPONSIVENESS (Produce Guide)
+   Fixes "catageroius oper nech ho rhi"
+   ----------------------------------------- */
+.category-filter-card {
+  background: #ffffff;
+  border: 1px solid var(--ff-border);
+  border-radius: 20px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 4px 20px rgba(20, 60, 40, 0.05);
+  margin-bottom: 2rem;
+}
+
+/* Horizontal scrollable pills container */
+.category-scroll-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  padding: 4px 2px;
+  flex-wrap: nowrap;
+}
+.category-scroll-bar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* Standardized, stable category pill button */
+.category-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  height: 42px;
+  padding: 0 1.25rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 50px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: 1.5px solid #d1ebd9;
+  background: #fbfdfc;
+  color: var(--ff-green-dark);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.category-pill-btn:hover {
+  background: var(--ff-green-soft);
+  border-color: var(--ff-green);
+  color: var(--ff-green);
+}
+.category-pill-btn.active {
+  background: var(--ff-green);
+  border-color: var(--ff-green);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(35, 132, 90, 0.22);
+}
+
+/* Category Filter Layout adjustments */
+@media (max-width: 991.98px) {
+  .category-filter-card {
+    padding: 1rem;
+  }
+  .category-filter-card .row {
+    flex-direction: column-reverse;
+  }
+  .category-search-wrapper {
+    margin-bottom: 0.75rem;
+    width: 100%;
+  }
+}
+
+/* -----------------------------------------
+   4. HOME PAGE SHOWCASE TABS & PROMINENT SEARCH
+   ----------------------------------------- */
+.showcase-tabs-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  flex-wrap: nowrap;
+  padding: 4px 2px 8px;
+}
+.showcase-tabs-container::-webkit-scrollbar {
+  display: none;
+}
+.showcase-tab-btn {
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border-radius: 50px;
+  padding: 0 1.25rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+  border: 1.5px solid #d4ebdd;
+  background: #f1f8f4;
+  color: #2d5a44;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.showcase-tab-btn:hover {
+  background: #e1f2e7;
+  border-color: var(--ff-green);
+}
+.showcase-tab-btn.active {
+  background: var(--ff-green);
+  border-color: var(--ff-green);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(35, 132, 90, 0.24);
+}
+
+/* Home Search Panel */
+.home-search-panel {
+  background: #ffffff;
+  border: 1px solid var(--ff-border);
+  border-radius: 24px;
+  padding: 1.75rem;
+  box-shadow: 0 16px 45px rgba(18, 59, 39, 0.12);
+  margin-top: -55px;
+  position: relative;
+  z-index: 10;
+}
+.home-search-panel .form-select,
+.home-search-panel .form-control {
+  height: 46px;
+  border-radius: 12px;
+}
+@media (max-width: 767.98px) {
+  .home-search-panel {
+    margin-top: -30px;
+    padding: 1.25rem;
+    border-radius: 18px;
+  }
+}
+
+/* -----------------------------------------
+   5. MARKET DIRECTORY SIDEBAR CATEGORIES
+   ----------------------------------------- */
+.filter-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.45rem;
+}
+.filter-category-btn {
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border-radius: 10px;
+  border: 1px solid var(--ff-border);
+  background: #f8fbf9;
+  color: var(--ff-ink);
+  transition: all 0.18s ease;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+.filter-category-btn:hover {
+  background: var(--ff-green-soft);
+  border-color: #b8e0ca;
+  color: var(--ff-green);
+}
+.filter-category-btn.active {
+  background: var(--ff-green);
+  border-color: var(--ff-green);
+  color: #ffffff;
+}
+
+/* -----------------------------------------
+   6. BOOKMARK TABS & SOCIAL BUTTONS
+   ----------------------------------------- */
+.bookmark-tabs-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  flex-wrap: nowrap;
+  padding-bottom: 4px;
+}
+.bookmark-tabs-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.bookmark-tabs-wrapper .nav-link {
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border-radius: 50px;
+  padding: 0 1.25rem !important;
+  font-size: 0.88rem;
+}
+
+/* -----------------------------------------
+   7. BREADCRUMBS, STATUS BADGES & SCHEDULE
+   ----------------------------------------- */
+.ff-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.86rem;
+  margin-bottom: 1.5rem;
+  padding: 0.55rem 1rem;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--ff-border);
+}
+.ff-breadcrumb a {
+  color: var(--ff-green);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.ff-breadcrumb a:hover {
+  text-decoration: underline;
+}
+.ff-breadcrumb .divider {
+  color: #9cb0a4;
+}
+.ff-breadcrumb .current {
+  color: var(--ff-muted);
+  font-weight: 600;
+}
+
+/* Status Badges */
+.badge-open-now {
+  background-color: #d1fae5;
+  color: #065f46;
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 0.35rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  border: 1px solid #a7f3d0;
+}
+.badge-closed {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.35rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  border: 1px solid #e5e7eb;
+}
+.badge-season {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-radius: 50px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.badge-category {
+  background-color: #e0f2fe;
+  color: #075985;
+  border-radius: 50px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Schedule Table */
+.schedule-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--ff-border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.schedule-table th, .schedule-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--ff-border);
+  font-size: 0.88rem;
+}
+.schedule-table th {
+  background: #f3f9f5;
+  color: var(--ff-ink);
+  font-weight: 600;
+}
+.schedule-table tr:last-child td {
+  border-bottom: none;
+}
+.schedule-table tr.today-row {
+  background: #ebfbee;
+  font-weight: 600;
+  color: var(--ff-green-dark);
+}
+.schedule-table tr.today-row td:first-child::before {
+  content: "👉 ";
+}
+
+/* Produce Mini Card */
+.produce-mini-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #fbfdfc;
+  border: 1px solid var(--ff-border);
+  border-radius: 14px;
+  transition: all 0.2s ease;
+}
+.produce-mini-card:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+.produce-mini-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.produce-mini-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Social Share Buttons */
+.share-links-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.social-share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+.social-share-btn:hover {
+  transform: translateY(-2px);
+}
+.share-wa { background: #25D366; color: #fff; }
+.share-tw { background: #1DA1F2; color: #fff; }
+.share-fb { background: #1877F2; color: #fff; }
+.share-email { background: #555e69; color: #fff; }
+
+/* Note Item */
+.note-item {
+  background: #fff;
+  border: 1px solid var(--ff-border);
+  border-left: 4px solid var(--ff-green);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+/* Chat Link */
+.chat-link {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+  background: #fff;
+  border: 1px solid #82c2a0;
+  border-radius: 20px;
+  color: var(--ff-green-dark);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+.chat-link:hover {
+  background: var(--ff-green);
+  color: #fff;
+}
+
+/* Visitor Pill */
+.visitor-pill {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Focus Outline */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid #38a169;
+  outline-offset: 2px;
+}

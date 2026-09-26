@@ -1,0 +1,163 @@
+[
+  {
+    "id": "apple",
+    "name": "Organic Honeycrisp Apples",
+    "shortName": "Apple",
+    "category": "fruits",
+    "season": "Autumn / Winter",
+    "image": "images/images/apple.jpg",
+    "icon": "images/products/apple.svg",
+    "description": "Crispy, naturally sweet organic apples packed with dietary fiber, vitamin C, and antioxidants from orchard harvests.",
+    "nutrition": "52 kcal/100g, High Vitamin C & Fiber",
+    "storageTip": "Store in a cool dry crisper drawer to maintain snap for up to 3 weeks.",
+    "markets": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "tomato",
+    "name": "Vine-Ripened Heirloom Tomatoes",
+    "shortName": "Tomato",
+    "category": "vegetables",
+    "season": "Summer / All Year",
+    "image": "images/images/tomato.jpg",
+    "icon": "images/products/tomato.svg",
+    "description": "Sweet, juicy field tomatoes bursting with savory flavor, rich in natural lycopene and vitamin A.",
+    "nutrition": "18 kcal/100g, Rich in Lycopene",
+    "storageTip": "Keep at room temperature away from direct sunlight for the best aroma and texture.",
+    "markets": [
+      1,
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "spinach",
+    "name": "Crisp Farm Baby Spinach",
+    "shortName": "Spinach",
+    "category": "vegetables",
+    "season": "Spring / Winter",
+    "image": "images/images/spinach.jpg",
+    "icon": "images/products/spinach.svg",
+    "description": "Tender, vibrant dark-green leaves carefully harvested in early dawn, loaded with iron, lutein, and folate.",
+    "nutrition": "23 kcal/100g, High Iron & Calcium",
+    "storageTip": "Wrap in a dry paper towel and refrigerate in an airtight container to keep crisp.",
+    "markets": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "id": "carrot",
+    "name": "Sweet Crunchy Root Carrots",
+    "shortName": "Carrot",
+    "category": "vegetables",
+    "season": "Winter / Spring",
+    "image": "images/images/carrot.jpg",
+    "icon": "images/products/carrot.svg",
+    "description": "Earthy, firm carrots harvested with greens intact, naturally sweet and packed with eyesight-boosting beta-carotene.",
+    "nutrition": "41 kcal/100g, Exceptional Beta-Carotene",
+    "storageTip": "Trim green tops before storing in the vegetable drawer to retain natural sweetness.",
+    "markets": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "strawberry",
+    "name": "Fresh Field Strawberries",
+    "shortName": "Strawberry",
+    "category": "fruits",
+    "season": "Winter / Spring",
+    "image": "images/images/strawberry.jpg",
+    "icon": "images/products/strawberry.svg",
+    "description": "Aromatic ruby-red berries picked fresh at morning dew, packed with polyphenols, manganese, and vitamin C.",
+    "nutrition": "32 kcal/100g, Ultra High Vitamin C",
+    "storageTip": "Do not wash until immediately before serving; store chilled in original breathable box.",
+    "markets": [
+      1,
+      3,
+      6
+    ]
+  },
+  {
+    "id": "basil",
+    "name": "Aromatic Sweet Basil",
+    "shortName": "Basil",
+    "category": "herbs",
+    "season": "Summer / All Year",
+    "image": "images/images/basil.jpg",
+    "icon": "images/products/basil.svg",
+    "description": "Fragrant sweet Italian and Mediterranean basil leaves, rich in essential oils, ideal for pestos, salads, and pasta.",
+    "nutrition": "22 kcal/100g, Essential Oils & Flavonoids",
+    "storageTip": "Treat like freshly cut flowers in a cup of water at room temperature.",
+    "markets": [
+      1,
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "id": "mint",
+    "name": "Invigorating Garden Mint",
+    "shortName": "Mint",
+    "category": "herbs",
+    "season": "Spring / Summer",
+    "image": "images/images/mint.jpg",
+    "icon": "images/products/mint.svg",
+    "description": "Crisp and cooling spearmint and peppermint shoots, perfect for revitalizing teas, lemonades, chutneys, and garnishes.",
+    "nutrition": "44 kcal/100g, Natural Menthol",
+    "storageTip": "Wrap loosely in damp kitchen cloth and refrigerate.",
+    "markets": [
+      1,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "milk",
+    "name": "Grass-Fed Farm Whole Milk",
+    "shortName": "Milk",
+    "category": "dairy",
+    "season": "All Year",
+    "image": "images/images/milk.jpg",
+    "icon": "images/products/milk.svg",
+    "description": "Wholesome, pure unpasteurized morning farm milk with thick golden cream layer, free from synthetic hormones or additives.",
+    "nutrition": "62 kcal/100ml, High Protein & Calcium",
+    "storageTip": "Store between 2°C and 4°C in the coldest middle section of the refrigerator.",
+    "markets": [
+      2,
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "id": "cheese",
+    "name": "Artisanal Farmhouse Cheese",
+    "shortName": "Cheese",
+    "category": "dairy",
+    "season": "All Year",
+    "image": "images/images/cheese.jpg",
+    "icon": "images/products/cheese.svg",
+    "description": "Aged natural farmhouse cheese handmade in small wheels using traditional rennet and grass-fed dairy cow milk.",
+    "nutrition": "350 kcal/100g, Concentrated Protein & Healthy Fats",
+    "storageTip": "Wrap in parchment paper or cheese paper rather than plastic wrap to let it breathe.",
+    "markets": [
+      2,
+      3,
+      4,
+      6
+    ]
+  }
+]
